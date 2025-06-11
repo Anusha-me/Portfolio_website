@@ -1,0 +1,28 @@
+nav {
+  font-size: 18px;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  li a {
+    color: #000 !important;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      color: #007bff !important;
+    }
+  }
+}
