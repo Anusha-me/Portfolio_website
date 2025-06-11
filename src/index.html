@@ -1,143 +1,337 @@
 <!DOCTYPE html>
 <html lang="en" class="sr">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+  <title>Anusha Durgam | Data Scientist</title>
+  <meta name="keywords" content="Anusha, Durgam, Data Scientist, Data Analyst, AI, ML, Portfolio" />
+  <meta name="description" content="Anusha Durgam | Data Scientist & AI/ML Enthusiast with strong skills in Data Analytics." />
 
-    <title>Anusha Durgam | Data Scientist</title>
-    <meta name="keywords" content="Anusha, Durgam, Data Scientist, Machine Learning, Python, AI, Portfolio" />
-    <meta name="description" content="Anusha Durgam | Data Scientist with a passion for Machine Learning and AI." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="styles.scss" />
+  <script defer src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="styles.scss" />
-    <script
-      defer
-      src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"
-    ></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-  </head>
-  <body>
-    <div id="top"></div>
+  <style>
+    nav {
+      font-size: 20px;
+      padding: 20px 30px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
 
-    <!-- **** Hero Section **** -->
-    <section id="hero" class="jumbotron">
-      <div class="container">
-        <h1 class="hero-title load-hidden">
-          Hi, my name is <span class="text-color-main">Anusha Durgam</span>
-          <br />
-          I'm a Data Scientist & AI Enthusiast.
-        </h1>
-        <p class="hero-cta load-hidden">
-          <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about">Know more</a>
-        </p>
-      </div>
-    </section>
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
 
-    <!-- **** About Section **** -->
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title load-hidden">About me</h2>
-        <div class="row about-wrapper">
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__image load-hidden">
-              <img alt="Profile Image" class="img-fluid rounded shadow-lg" height="auto" width="300px" src="assets/profile.jpg" />
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__info load-hidden">
-              <p class="about-wrapper__info-text">
-                I’m a Data Scientist passionate about building predictive models, solving real-world problems, and exploring the intersection of AI and analytics.
-              </p>
-              <p class="about-wrapper__info-text">
-                I love deep learning, data visualization, and creating machine learning solutions. My goal is to contribute to impactful tech that improves lives.
-              </p>
-              <span class="d-flex mt-3">
-                <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="assets/resume.pdf">
-                  View Resume
-                </a>
-              </span>
-            </div>
-          </div>
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 700;
+      color: #2a2a2a;
+    }
+
+    #typed-text {
+      color: #2a9d8f;
+      font-weight: bold;
+    }
+
+    .project-wrapper__text-title {
+      font-weight: 800;
+      font-size: 1.4rem;
+    }
+
+    .project-wrapper img {
+      max-height: 250px;
+      object-fit: contain;
+    }
+    .experience-entry {
+      margin-bottom: 2.5rem;
+      text-align: left;
+    }
+    .experience-entry ul {
+      padding-left: 20px;
+    }
+    .project-wrapper__image img {
+      max-height: 180px;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <div id="top"></div>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="jumbotron">
+    <div class="container">
+      <h1 class="hero-title load-hidden">
+        Hi, I'm <span class="text-color-main">Anusha Durgam</span><br />
+        <span id="typed-text"></span>
+      </h1>
+      <p class="hero-cta load-hidden">
+        <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about">Know more</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+  <div class="container">
+    <h2 class="section-title load-hidden">About Me</h2>
+    <div class="row about-wrapper">
+      <div class="col-md-6 col-sm-12">
+        <div class="about-wrapper__image load-hidden">
+          <img alt="Profile Image" class="img-fluid rounded shadow-lg" height="auto" width="300px" src="assets/profile.jpg" />
         </div>
       </div>
-    </section>
-
-    <!-- **** Projects Section **** -->
-    <section id="projects">
-      <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Projects</h2>
-
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Bitcoin Price Predictor</h3>
-                <p class="mb-4">
-                  Designed an ANN-LSTM hybrid model to forecast Bitcoin prices using macroeconomic and technical indicators.
-                </p>
-                <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="#">See Live</a>
-                <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="https://github.com/Anusha-me/bitcoin-predictor">Source Code</a>
-              </div>
-            </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="#" target="_blank">
-                  <div class="thumbnail rounded js-tilt">
-                    <img alt="Project Image" class="img-fluid" src="assets/bitcoin-project.jpg" />
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Add more projects similarly -->
-
-        </div>
-      </div>
-    </section>
-
-    <!-- **** Contact Section **** -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-wrapper load-hidden">
-          <p class="contact-wrapper__text">
-            Let's connect! I'm open to collaboration, research, and new opportunities.
+      <div class="col-md-6 col-sm-12">
+        <div class="about-wrapper__info load-hidden">
+          <p class="about-wrapper__info-text">
+            I’m Anusha Durgam, a passionate Data Scientist and AI/ML practitioner with a strong foundation in analytics, deep learning, and data engineering. I love building systems that combine performance, transparency, and real-world impact. From forecasting cryptocurrency trends with ANN-LSTM to automating dashboard analytics at scale, I thrive at solving complex problems with data and code.
           </p>
-          <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="mailto:anusha@email.com">Email Me</a>
+          <p class="about-wrapper__info-text">
+            With hands-on experience in deploying ML pipelines, creating explainable models, and working across cloud platforms, I bring both technical depth and cross-functional agility. I’m currently exploring cutting-edge trends in GenAI, scalable MLOps, and cloud-native AI deployments.
+          </p>
+          <p class="about-wrapper__info-text">
+            <strong>TECH STACK:</strong><br/>
+            <strong>Languages:</strong> Python, SQL, Java, Bash<br/>
+            <strong>ML & DL Frameworks:</strong> Scikit-learn, TensorFlow, PyTorch, XGBoost<br/>
+            <strong>Data Engineering:</strong> Spark, Airflow, ETL/ELT<br/>
+            <strong>Cloud Platforms:</strong> GCP, AWS, Azure (ADF)<br/>
+            <strong>Visualization:</strong> Power BI, Streamlit, Excel<br/>
+            <strong>CI/CD & DevOps:</strong> Git, GitHub Actions, MLflow, Docker<br/>
+            <strong>Databases:</strong> MySQL
+          </p>
+          <span class="d-flex mt-3">
+            <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="assets/Resume.pdf">View Resume</a>
+          </span>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- **** Footer Section **** -->
-    <footer class="footer navbar-static-bottom">
-      <div class="container">
-        <a rel="noreferrer" href="#top" class="back-to-top">
-          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-        </a>
-        <div class="social-links">
-          <a rel="noreferrer" href="https://twitter.com/anusha" target="_blank">
-            <i class="fa fa-twitter fa-inverse"></i>
-          </a>
-          <a rel="noreferrer" href="https://linkedin.com/in/dg-anushha" target="_blank">
-            <i class="fa fa-linkedin fa-inverse"></i>
-          </a>
-          <a rel="noreferrer" href="https://github.com/Anusha-me" target="_blank">
-            <i class="fa fa-github fa-inverse"></i>
-          </a>
+
+  <section id="experience">
+  <div class="container">
+    <h2 class="section-title dark-blue-text">Experience & Education</h2>
+
+    <!-- Experience -->
+    <section id="experience">
+  <div class="container">
+    <h2 class="section-title dark-blue-text">Experience</h2>
+
+    <div class="experience-entry mb-5">
+      <h3><strong>Data Research Engineer – ML Forecast Pipelines</strong></h3>
+      <p><em>University of South Florida | Aug 2023 – May 2025</em></p>
+      <ul>
+        <li>Designed and deployed ANN-LSTM pipelines on GCP using Vertex AI, BigQuery, and Airflow to forecast Bitcoin price movement over multi-year timeframes.</li>
+        <li>Created containerized APIs using Flask + Docker with sub-second response latency for real-time prediction deployment.</li>
+        <li>Integrated MLflow to automate model lifecycle management including training, logging, versioning, and retraining.</li>
+        <li>Reduced computational cost and retrain time by 40% through CI/CD workflows using GitHub Actions and DAG optimization.</li>
+      </ul>
+    </div>
+
+    <div class="experience-entry mb-5">
+      <h3><strong>Data Analyst Intern – Engineering Dashboards</strong></h3>
+      <p><em>DRDO, Hyderabad | Aug 2022 – Aug 2023</em></p>
+      <ul>
+        <li>Developed ETL pipelines in Apache Spark to process 2M+ telemetry and ledger entries per hour for defense applications.</li>
+        <li>Built machine learning models using PyTorch for anomaly detection in real-time control systems, improving operational reliability by 35%.</li>
+        <li>Designed Power BI dashboards for finance and R&D metrics, improving decision-making speed across departments.</li>
+        <li>Created a centralized data warehouse using PostgreSQL with built-in validation and audit logging for traceability.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <h2 class="section-title dark-blue-text">Education</h2>
+
+    <div class="experience-entry">
+      <h3><strong>Masters of science in Data Intelligence</strong></h3>
+      <p><em>University of South Florida | Aug 2023 – May 2025</em></p>
+      <p><strong>Relevant Coursework:</strong> Distributed Systems, Data Engineering, Machine Learning Operations (MLOps), Cloud Computing, Machine Learning, Audit Analytics, Big Data Systems, SQL Optimization</p>
+    </div>
+
+    <div class="experience-entry">
+      <h3><strong>Bachelors of Technology in Electronics & Communication</strong></h3>
+      <p><em>Jawaharlal Nehru Technological University | Aug 2019 – Jun 2023</em></p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projects Section -->
+  <section id="projects">
+  <div class="container">
+    <div class="project-wrapper">
+      <h2 class="section-title dark-blue-text">Projects</h2>
+
+      <!-- Bitcoin Forecasting -->
+      <div class="row">
+        <div class="col-lg-4 col-sm-12">
+          <div class="project-wrapper__text load-hidden">
+            <h3 class="project-wrapper__text-title">Bitcoin Forecasting</h3>
+            <ul>
+              <li>Built a hybrid ANN-LSTM model treating Bitcoin both as a stock and currency across multi-year timeframes (2017–2024).</li>
+              <li>Engineered feature sets from macroeconomic indicators, sentiment data, exchange rates, and technical signals.</li>
+              <li>Deployed pipelines via Airflow, served Flask APIs in Docker, and automated versioning using MLflow.</li>
+              <li>Integrated SHAP to interpret predictions and ensure model transparency.</li>
+            </ul>
+            <a class="cta-btn text-color-main" href="https://github.com/Anusha-me/Bitcoin_dual-perspective_forecasting">Source Code</a>
+          </div>
         </div>
-        <hr />
-        <p class="footer__text">
-          © 2025 - Created by Anusha Durgam | Template by <a rel="noreferrer" href="https://github.com/cobiwave" target="_blank">Jacobo Martínez</a>
+        <div class="col-lg-8 col-sm-12">
+          <div class="project-wrapper__image"><img class="img-fluid" src="assets/bitcoin-project.jpg" alt="Bitcoin Forecasting"/></div>
+        </div>
+      </div>
+
+      <!-- Customer Churn -->
+      <div class="row">
+        <div class="col-lg-4 col-sm-12">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">Customer Churn Prediction</h3>
+            <ul>
+              <li>Performed EDA and feature engineering on telecom customer data to identify churn risks.</li>
+              <li>Trained logistic regression and ensemble models, improving both precision and recall.</li>
+              <li>Used SHAP values for explainability and created dashboards for retention strategy insights.</li>
+            </ul>
+            <a class="cta-btn text-color-main" href="https://github.com/Anusha-me/Customer_churn_analysis">Source Code</a>
+          </div>
+        </div>
+        <div class="col-lg-8 col-sm-12">
+          <div class="project-wrapper__image"><img class="img-fluid" src="assets/churn.png" alt="Customer Churn"/></div>
+        </div>
+      </div>
+
+      <!-- Disease X Detection -->
+      <div class="row">
+        <div class="col-lg-4 col-sm-12">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">Disease X Detection</h3>
+            <ul>
+              <li>Trained a CNN in PyTorch using transfer learning and advanced augmentation techniques.</li>
+              <li>Achieved 92% F1-score and 0.95 AUC on medical image data.</li>
+              <li>Used SHAP-based visualizations to interpret model decision regions.</li>
+            </ul>
+            <a class="cta-btn text-color-main" href="https://github.com/Anusha-me/Disease-x-Detection-ML-project">Source Code</a>
+          </div>
+        </div>
+        <div class="col-lg-8 col-sm-12">
+          <div class="project-wrapper__image"><img class="img-fluid" src="assets/diseasex.jpg" alt="Disease X"/></div>
+        </div>
+      </div>
+
+      <!-- MNIST Classifier -->
+      <div class="row">
+        <div class="col-lg-4 col-sm-12">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">MNIST Digit Classifier</h3>
+            <ul>
+              <li>Built a CNN using Keras & TensorFlow, achieving 99.3% test accuracy.</li>
+              <li>Visualized layer activations, filters, and used dropout & batch normalization for tuning.</li>
+              <li>Optimized model using Adam optimizer and early stopping.</li>
+            </ul>
+            <a class="cta-btn text-color-main" href="https://github.com/Anusha-me/Mnist-digit-classification-cnn">Source Code</a>
+          </div>
+        </div>
+        <div class="col-lg-8 col-sm-12">
+          <div class="project-wrapper__image"><img class="img-fluid" src="assets/mnist.png" alt="MNIST Classifier"/></div>
+        </div>
+      </div>
+
+      <!-- IMDB Movie Analytics -->
+      <div class="row">
+        <div class="col-lg-4 col-sm-12">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">IMDB Movie Analytics</h3>
+            <ul>
+              <li>Designed a Power BI dashboard for 5,000+ movies categorized by ratings, revenue, and genre.</li>
+              <li>Built filters and slicers for interactive drilldowns across production countries and budgets.</li>
+              <li>Extracted actionable patterns to understand trends in audience behavior and box office success.</li>
+            </ul>
+            <a class="cta-btn text-color-main" href="https://github.com/Anusha-me/IMDB-Movie-Analysis-with-PowerBI">Source Code</a>
+          </div>
+        </div>
+        <div class="col-lg-8 col-sm-12">
+          <div class="project-wrapper__image"><img class="img-fluid" src="assets/imdb.jpeg" alt="IMDB Analytics"/></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-wrapper load-hidden">
+        <p class="contact-wrapper__text">
+          Let's connect! I'm open to collaboration, research, and new opportunities.
         </p>
+        <a rel="noreferrer" class="cta-btn cta-btn--resume" href="mailto:durgam.anusha1181@gmail.com">Connect Here</a>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script defer type="module" src="index.js"></script>
-  </body>
+  <!-- Footer -->
+  <footer class="footer navbar-static-bottom">
+    <div class="container">
+      <a href="#top" class="back-to-top"><i class="fa fa-angle-up fa-2x"></i></a>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/dg-anushha" target="_blank"><i class="fa fa-linkedin fa-inverse"></i></a>
+        <a href="https://github.com/Anusha-me" target="_blank"><i class="fa fa-github fa-inverse"></i></a>
+      </div>
+      <hr />
+      <p class="footer__text">© 2025 - Created by Anusha Durgam</p>
+    </div>
+  </footer>
+
+  <script defer type="module" src="index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      new Typed('#typed-text', {
+        strings: [
+          "I'm a Data Scientist.",
+          "I build AI/ML solutions.",
+          "I love analytics & insights.",
+        ],
+        typeSpeed: 55,
+        backSpeed: 40,
+        backDelay: 1500,
+        loop: true
+      });
+    });
+  </script>
+</body>
 </html>
